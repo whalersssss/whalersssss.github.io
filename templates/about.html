@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="display-5 mb-4">About Us</h2>
+                <p class="lead">Pet Adoption & Care is a platform designed to support pet owners and their families with comprehensive tools and resources.</p>
+                <p>Our mission is to make pet ownership easier and more enjoyable for everyone. We offer a one-stop solution for all your pet needs, from adoption to daily care.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="{{ images[1] }}"
+                     class="img-fluid rounded-3 shadow" alt="Pet Care">
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="mb-4">Our Journey</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon bg-primary"></div>
+                        <div class="timeline-content">
+                            <h5>Founded in 2023</h5>
+                            <p>Launched the platform to help pet owners.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon bg-success"></div>
+                        <div class="timeline-content">
+                            <h5>Expanded in 2024</h5>
+                            <p>Added AI-driven health tracking and family-friendly features.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

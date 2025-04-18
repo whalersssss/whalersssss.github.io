@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="display-5 mb-4">Welcome to Pet Adoption & Care</h2>
+                <p class="lead">A one-stop platform offering personalized pet adoption matching, AI-driven health tracking, family-friendly pet care guides, and tools to manage pets' needs for all household members.</p>
+                <p>Visitors: {{ count }}</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="{{ images[0] }}"
+                     class="img-fluid rounded-3 shadow" alt="Pet Adoption">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Featured Pets</h2>
+        <div class="row g-4">
+            {% for pet in pets %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-hover h-100">
+                    <img src="{{ pet.image }}" class="card-img-top pet-image" alt="{{ pet.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ pet.name }}</h5>
+                        <p class="card-text">Health: {{ pet.health }}</p>
+                        <p class="card-text">Age: {{ pet.age }}</p>
+                        <p class="card-text">Gender: {{ pet.gender }}</p>
+                        <p class="card-text">Price: {{ pet.price }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
